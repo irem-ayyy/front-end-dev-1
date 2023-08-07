@@ -1,0 +1,180 @@
+1-Commit Nedir?
+Commit, yazılım geliştirme sürecinde, bir proje veya depo üzerinde yapılan değişikliklerin kaydedildiği ve saklandığı bir aşamadır.
+Bu değişiklikler, kod eklemeleri, düzeltmeleri veya değişiklikleri içerebilir ve genellikle bir zaman damgası ve açıklama ile ilişkilendirilir.
+
+2-Commit Nasıl Yapılır?
+İlk olarak Stage Etme ile başlayalım:
+Değişikleri commit etmek için projemizin klasöründe terminali açıyoruz.Ardından değişiklikleri "stage" etmek için "git add" komutunu kullanıyoruz.
+
+örnek:
+git add dosya1.js dosya2.css
+
+İkinci işlem ise Commit mesajını yazalım:
+commit işlemine açıklama eklemek önemlidir.Açıklamayı 'git commit -m' komutuyla belirtebiliriz.
+
+örnek:
+git commit -m "Kullanıcı girişi ekranı tasarımını güncelle"
+
+Üçüncü olarak Commit i Gerçekleştirelim: 
+Açıklamayı yazdıktan sonra, değişiklikleri resmi olarak commit etmemiz için git commit komutunu kullanabiliriz.
+
+Örnek:
+'git commit'
+
+Bu komutu çalıştırdığımızda, bir metin düzenleyici açılabilir ve daha detaylı bir açıklama yazmamıza olanak tanır. 
+Eğer açıklamayı terminalde yazmayı tercih ediyorsak, yukarıdaki -m seçeneğini kullanmaya devam edebiliriz.
+
+
+Üçüncü işlem Push Etme:
+Yereldeki commitleri uzak bir sunucuya (örneğin, GitHub) göndermek için git push komutunu kullanabiliriz. 
+Bu, projemizi paylaşmamıza ve ekip üyeleriyle işbirliği yapmanıza olanak tanır.
+
+Örnek:
+"git push origin ana-dal"
+
+Burada ana-dal, uzak sunucudaki ana dalın adını temsil eder. Eğer projeyi klonladıysak genellikle "ana" veya "master" dalı olacaktır.
+
+3-Birden Fazla Dosyanın Commit Edilmesi: 
+Bir projede birden çok dosya üzerinde çalıştığımızda, bu değişiklikleri tek bir commit içinde toplamak ve düzenli bir şekilde saklamak isteyebiliriz. 
+İşte birden fazla dosyanın tek bir commit içinde toplanması için adım adım bir yaklaşım:
+
+Değişiklikleri İzlemeye Başlayalım (Stage Etme):
+İlk adım, commit etmek istediğimiz değişiklikleri "stage" etmektir. Değişiklikleri takip etmek ve commit etmek istediğimiz dosyaları git add komutuyla belirtelim.
+
+Örnek:
+"git add dosya1.js dosya2.css"
+Bu komut, değişiklikleri izlemeye başlar ve commit etmek üzere bekletir.
+
+Commit Mesajını Yazalım:
+Değişiklikleri stage ettiğimizde, bu değişiklikler için açıklamayı "git commit -m" komutuyla yazalım. Açıklama, yaptığımız değişiklikleri ve eklediğimiz dosyaları özetlemelidir.
+
+Örnek:
+'git commit -m'  "Kullanıcı arayüzünü güncelle ve hata düzeltmeleri ekle"
+
+Değişiklikleri Commit Edelim:
+Commit mesajını yazdıktan sonra, değişiklikleri resmi olarak commit etmek için git commit komutunu kullanabiliriz.
+
+Örnek:
+"git commit"
+
+Eğer birden fazla dosyada değişiklik yaptıysak ve bu değişiklikleri hepsini aynı commit içinde toplamak istiyorsak, bu adımları her dosya için tekrarlamalıyız.
+
+Değişiklikleri Uzak Sunucuya Gönderme (Push Etme):
+Commitleri uzak bir sunucuya (örneğin, GitHub) göndermek için git push komutunu kullanabiliriz.
+
+Örnek:
+"git push origin ana-dal"
+Burada ana-dal, uzak sunucudaki ana dalın adını temsil eder.
+
+
+4-Commit Mesajlarının Önemi:
+Commit mesajları, yazılım geliştirme sürecinde büyük bir öneme sahiptir. İyi yazılmış ve açıklayıcı commit mesajları, projenin takibini kolaylaştırır, geçmişte yapılan değişiklikleri anlama ve hatayı 
+tespit etme süreçlerini iyileştirir.
+
+Önemli Nedenler:
+
+Geçmiş İzleme ve Takip: İyi yazılmış commit mesajları, projenin geçmişini izlemeyi kolaylaştırır. Geçmişte yapılan değişiklikleri takip edebilir, neden ve nasıl yapıldığını anlayabiliriz.
+
+Hata Tespiti ve Ayıklama: Hatalar oluştuğunda veya bir değişiklik geri alındığında, iyi bir commit mesajı hata ayıklama sürecini hızlandırabilir. 
+Hangi değişikliğin ne zaman yapıldığını ve neden yapıldığını anlamak hataları tespit etmeyi kolaylaştırır.
+
+İşbirliği ve Ekip Çalışması: Birden fazla geliştirici aynı projede çalıştığında, iyi yazılmış commit mesajları işbirliğini artırır. 
+Diğer geliştiriciler değişiklikleri anlayabilir ve projeye katkıda bulunabilir.
+
+Belgeleme: İyi bir commit mesajı, projenin geçmişini belgelemeye yardımcı olur. İlerleyen zamanlarda projenin ne zaman, neden ve nasıl değiştiğini anlamak daha kolay olur.
+
+İyi Bir Commit Mesajı Yazmak İçin İpuçları:
+
+Açıklamayı Kısa ve Öz Tutun: Commit mesajınızı kısa ve öz tutmaya çalışın. İdeal olarak, 50-72 karakter aralığında bir başlıkla başlayın.
+
+Değişiklikleri Açıklayın: Commit mesajıyla neyin değiştiğini açıklayın. Hangi özelliğin eklendiği, hangi hatanın düzeltildiği veya hangi iyileştirmelerin yapıldığı gibi bilgileri paylaşın.
+
+Neden ve Amaç: Değişikliğin nedenini ve amacını açıklayın. Bu, gelecekteki geliştiricilere veya size projeyi anlamak için yardımcı olacaktır.
+
+Özgün Olun: Commit mesajları tekrarlanmamalıdır. Her commit mesajı farklı bir değişikliği ve amaçları ifade etmelidir.
+
+Dil ve Gramer: Dil ve gramatik kurallarına dikkat edin. Açıklamalar anlaşılır olmalı ve profesyonel bir dille yazılmalıdır.
+
+
+5-Commit Geçmişi: Commit geçmişinizi nasıl kontrol edebileceğinizi ve eski bir commit'e nasıl dönebileceğinizi açıklayın.
+
+ChatGPT
+Git versiyon kontrol sistemi sayesinde commit geçmişinizi kontrol etmek ve eski bir commit e dönmek oldukça kolaydır. 
+
+Commit Geçmişini Kontrol Etme:
+
+Terminali açalım ve projemizin dizininde çalıştığımızdan emin olalım.
+
+Commit geçmişini görüntülemek için aşağıdaki komutu kullanalım:
+
+Örnek:
+"git log"
+Bu komut, tüm commitleri zaman sırasına göre listeleyecektir. Her commitin kimliği (hash), yazarı, tarihi ve açıklaması görüntülenir.
+
+Commit geçmişini daha kısa bir şekilde görüntülemek isterseniz:
+Örnek:
+"git log --oneline"
+Bu komut, her commiti tek bir satırda gösterir ve yalnızca kimlik (hash) ve açıklama görüntülenir.
+
+Eski Bir Commit e Dönme:
+
+Terminali açalım ve projemizin dizininde çalıştığımızdan emin olun.
+
+Dönmek istediğiniz commit in kimliğini (hash) alalım. Bu kimliği git log komutunu kullanarak bulabiliriz.
+
+Eski bir commit e dönmek için aşağıdaki komutu kullanalım (burada <commit-hash> kısmını geri dönmek istediğimiz commit in kimliğiyle değiştirelim):
+
+örnek:
+"git checkout <commit-hash>"
+Örnek:
+"git checkout abc123"
+Bu komut, belirtilen commit e döner ve projemizin o durumdaki halini geri getirir.
+
+Eski commit te çalıştıktan sonra, güncel projemize geri dönmek istersek ana dalı (genellikle "master" veya "main") seçerek aşağıdaki komutu kullanabiliriz:
+
+örnek:
+"git checkout ana-dal"
+Örnek:
+"git checkout master"
+Eski bir commit e dönmek, geçmişteki kod durumlarını incelemek veya bir hatayı düzeltmek için faydalı bir yöntemdir. Ancak dikkatli olunmalıdır, çünkü eski bir commit e döndüğünüzde sonraki 
+değişikliklerimizi kaybedebiliriz. Bu nedenle, dikkatlice ve gerektiği yerde kullanmamız önemlidir.
+
+6-Commit İptali:
+Bir commit i iptal etmek veya bir commit teki değişiklikleri geri almak, git geçmişini düzenleme ve güvenli bir şekilde işlemleri geri alma yeteneğimizden kaynaklanır. 
+İşte bu işlemleri nasıl yapabileceğimize dair adım adım bir açıklama:
+
+Son Commit i İptal Etmek:
+
+Eğer son commit i iptal etmek veya geri almak istersek, git reset komutunu kullanabiliriz. Bu komutla son commit iptal edilir ve değişikliklerimiz geri alınır. İşte nasıl yapılacağı:
+
+Terminali açalım ve projemizin dizininde çalıştığımızdan emin olun.
+
+Son commit i iptal etmek istediğimizde aşağıdaki komutu kullanın:
+
+örnek:
+"git reset HEAD~"
+Bu komut, son commit i iptal eder, ancak değişiklikleri yerel dizinde tutar.
+
+Eğer son commit i iptal ederek değişiklikleri de geri almak istersek, aşağıdaki komutu kullanırız:
+
+örnek:
+"git reset --hard HEAD~"
+Bu işlem sonrasında son commit ve onunla birlikte yapılan değişiklikler geri alınmış olur. Ancak, bu işlemi yaparken dikkatli olalım, çünkü geri alınan değişiklikler kalıcı olarak kaybolur.
+
+Belirli Bir Commit teki Değişiklikleri Geri Almak:
+
+Eğer belirli bir commit teki değişiklikleri geri almak veya iptal etmek istersek, git revert komutunu kullanabiliriz. Bu komut, belirli bir commit i geri alır, ancak geri alınan değişiklikleri yeni bir 
+commit olarak kaydeder.
+
+Terminali açalım ve projenimin dizininde çalıştığınızdan emin olun.
+
+Geri almak istediğimiz commit in kimliğini (hash) alalım. Bu kimliği git log komutunu kullanarak bulabiliriz.
+
+Belirli bir commit teki değişiklikleri geri almak için aşağıdaki komutu kullanalım (burada <commit-hash> kısmını geri almak istediğimiz commit in kimliğiyle değiştirelim):
+
+örnek:
+"git revert <commit-hash>"
+Örnek:
+"git revert abc123"
+Bu komutla, belirli bir commit teki değişiklikleri geri alırız. Değişiklikler geri alındığında, bu geri alma işlemi yeni bir commit olarak kaydedilir. 
+Bu sayede projenin geçmişi düzenlenirken, orijinal commit geçmiği de korunur.
